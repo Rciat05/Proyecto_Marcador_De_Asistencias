@@ -1,10 +1,7 @@
 ﻿using Dapper;
 using Marcar_Asistencias.Data;
-using Microsoft.AspNet.SignalR.Client;
-using Microsoft.AspNet.SignalR.Infrastructure;
 using proyectometodologias.models;
 using System.Data;
-using static Marcar_Asistencias.Repositories.EmpleadosRepository;
 
 namespace Marcar_Asistencias.Repositories
 {

@@ -1,0 +1,121 @@
+﻿@model IEnumerable<proyectometodologias.models.EmpleadosModel>
+
+@{
+    ViewData["Title"] = "Empleados";
+}
+<h1>Lista de Empleados</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="mb-3 mb-3">
+				<a asp-action="Create" asp-controller="Empleados" class="btn btn-success">
+					Agregar Empleados
+				</a>
+			</div>
+
+			<table class="table table-bordered table-striped table-responsive" id="clientsTable">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Fecha de Nacimiento</th>
+						<th>Departamento</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+							<td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+							<td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+							<td>@Html.DisplayFor(modelItem => item.Departamento)</td>
+							<td class="text-center">
+								<div class="w-75 btn-group" role="group">
+									<a class="btn btn-warning mx-2" asp-action="Edit" asp-route-id="@item.EmpleadosID"><i class="fa-solid fa-pen-to-square"></i></a>
+									<a class="btn btn-danger mx-2" asp-action="Delete" asp-route-id="@item.EmpleadosID"><i class="fa-solid fa-trash"></i></a>
+								</div>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			$("#clientsTable").DataTable({
+				dom: 'Bfrtip',
+				buttons: [
+					{
+						extend: 'csv',
+						exportOptions: {
+							columns: ':not(:last-child)'
+						}
+					},
+					{
+						extend: 'pdf',
+						exportOptions: {
+							columns: ':not(:last-child)'
+						}
+					},
+					{
+						extend: 'excel',
+						exportOptions: {
+							columns: ':not(:last-child)'
+						}
+					}
+				],
+				columnDefs: [
+					{
+						targets: 4,
+						orderable: false,
+						searchable: false
+					}
+				],
+				language: {
+					url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json'
+				}
+			});
+		});
+	</script>
+
+	@if (TempData["editEmpleados"] != null)
+	{
+		<script>
+			Toastify({
+				text: "¡Empleados editado!",
+				duration: 3000,
+				newWindow: true,
+				gravity: "top",
+				position: "right",
+				stopOnFocus: true,
+				style: {
+					background: "linear-gradient(to right, #00b09b, #96c93d)",
+				},
+			}).showToast();
+		</script>
+	}
+
+	@if (TempData["deleteEmpleados"] != null)
+	{
+		<script>
+			Toastify({
+				text: "Se eliminó el Empleado...",
+				duration: 3000,
+				newWindow: true,
+				gravity: "top",
+				position: "right",
+				stopOnFocus: true,
+				style: {
+					background: "linear-gradient(to right, #00b09b, #96c93d)",
+				},
+			}).showToast();
+		</script>
+	}
+}

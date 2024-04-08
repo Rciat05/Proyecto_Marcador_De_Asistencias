@@ -1,3 +1,7 @@
+using Marcar_Asistencias.Data;
+using Marcar_Asistencias.Repositories;
+using MarcarAsistencias.Data;
+
 namespace Marcar_Asistencias
 {
     public class Program
@@ -9,7 +13,11 @@ namespace Marcar_Asistencias
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            var app = builder.Build();
+			builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
+			builder.Services.AddScoped<IEmpleadosRepository, EmpleadosRepository>();
+
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

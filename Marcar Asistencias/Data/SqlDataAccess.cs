@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace MarcarAsistencias.Data
 {
-    public class SqlDataAccess : ISqlDataAccess
+   public class SqlDataAccess : ISqlDataAccess
     {
         private readonly string _connectionString;
         private readonly IConfiguration _configuration;
