@@ -3,8 +3,9 @@
     "",
     "\\Marcar Asistencias",
     "\\Marcar Asistencias\\Controllers",
+    "\\Marcar Asistencias\\Models",
     "\\Marcar Asistencias\\Repositories"
   ],
-  "SelectedNode": "\\Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
+  "SelectedNode": "\\Marcar Asistencias.sln",
   "PreviewInSolutionExplorer": false
 }

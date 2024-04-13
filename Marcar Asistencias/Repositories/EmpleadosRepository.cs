@@ -18,7 +18,7 @@ namespace Marcar_Asistencias.Repositories
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "dbo.spEmpleados_GetAll";
+                string storeProcedure = "Empleados_GetAll";
 
                 return connection.Query<EmpleadosModel>(
                                   storeProcedure,
@@ -35,7 +35,7 @@ namespace Marcar_Asistencias.Repositories
 
                 return connection.QueryFirstOrDefault<EmpleadosModel>(
                                   storeProcedure,
-                                  new { IdClient = id },
+                                  new { EmpleadoID = id },
                                   commandType: CommandType.StoredProcedure
                                     );
             }
