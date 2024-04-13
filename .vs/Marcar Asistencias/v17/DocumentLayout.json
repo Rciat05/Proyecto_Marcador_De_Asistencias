@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\models\\ausenciasmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\models\\ausenciasmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\repositories\\ausenciasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\repositories\\ausenciasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\repositories\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,69 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AusenciasModels.cs",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Models\\AusenciasModels.cs",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Models\\AusenciasModels.cs",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Models\\AusenciasModels.cs",
-              "RelativeToolTip": "Marcar Asistencias\\Models\\AusenciasModels.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T14:28:07.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAswBEAAABTAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T03:50:45.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "EmpleadosRepository.cs",
               "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
               "RelativeDocumentMoniker": "Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
               "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
               "RelativeToolTip": "Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA2wCUAAAA6AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T03:47:01.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T03:38:02.477Z",
+              "WhenOpened": "2024-04-13T14:41:48.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T03:35:40.446Z"
+              "DocumentIndex": 0,
+              "Title": "AusenciasRepository.cs",
+              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Repositories\\AusenciasRepository.cs",
+              "RelativeDocumentMoniker": "Marcar Asistencias\\Repositories\\AusenciasRepository.cs",
+              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Repositories\\AusenciasRepository.cs",
+              "RelativeToolTip": "Marcar Asistencias\\Repositories\\AusenciasRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T14:41:47.705Z",
+              "EditorCaption": ""
             }
           ]
         }
