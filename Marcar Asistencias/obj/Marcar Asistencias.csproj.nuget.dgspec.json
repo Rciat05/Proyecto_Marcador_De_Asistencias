@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desktop\\Escritorio 2024\\Metologias agiles\\Marcar Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {}
+    "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {}
   },
   "projects": {
-    "C:\\Desktop\\Escritorio 2024\\Metologias agiles\\Marcar Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {
+    "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desktop\\Escritorio 2024\\Metologias agiles\\Marcar Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
+        "projectUniqueName": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
         "projectName": "Marcar Asistencias",
-        "projectPath": "C:\\Desktop\\Escritorio 2024\\Metologias agiles\\Marcar Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
+        "projectPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
         "packagesPath": "C:\\Users\\Juan Carlos Iglesias\\.nuget\\packages\\",
-        "outputPath": "C:\\Desktop\\Escritorio 2024\\Metologias agiles\\Marcar Asistencias\\Marcar Asistencias\\obj\\",
+        "outputPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juan Carlos Iglesias\\AppData\\Roaming\\NuGet\\NuGet.Config",

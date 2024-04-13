@@ -4,7 +4,10 @@
     "\\Marcar Asistencias",
     "\\Marcar Asistencias\\Controllers",
     "\\Marcar Asistencias\\Models",
-    "\\Marcar Asistencias\\Repositories"
+    "\\Marcar Asistencias\\Repositories",
+    "\\Marcar Asistencias\\Views",
+    "\\Marcar Asistencias\\Views\\Empleados"
   ],
+  "SelectedNode": "\\Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }
