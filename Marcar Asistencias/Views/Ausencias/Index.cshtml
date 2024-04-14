@@ -1,0 +1,114 @@
+﻿@model IEnumerable<proyectometodologias.models.AusenciasModel>
+
+@{
+    ViewData["Title"] = "Ausencias";
+}
+
+<h1>Lista de Ausencias</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mb-3 mb-3">
+                <a asp-action="Create" asp-controller="Ausencias" class="btn btn-success">
+                    Agregar Ausencia
+                </a>
+            </div>
+            <table class="table table-bordered table-striped table-responsive" id="AusenciasTable">
+                <thead>
+                    <tr>
+                        <th>Empleado ID</th>
+                        <th>Fecha</th>
+                        <th>Tipo de Ausencia</th>
+                        <th>Justificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+                            <td>@Html.DisplayFor(modelItem => item.TipoAusencia)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Justificacion)</td>
+                            <td class="text-center">
+                                <div class="w-75 btn-group" role="group">
+                                    <a class="btn btn-warning mx-2" asp-action="Edit" asp-route-id="@item.IDAusencias"><i class="fa-solid fa-pen-to-square"></i></a>
+                                    <a class="btn btn-danger mx-2" asp-action="Delete" asp-route-id="@item.IDAusencias"><i class="fa-solid fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#AusenciasTable").DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'csv',
+                        exportOptions: {
+                            columns: ':not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        exportOptions: {
+                            columns: ':not(:last-child)'
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        exportOptions: {
+                            columns: ':not(:last-child)'
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        targets: 4,
+                        orderable: false,
+                        searchable: false
+                    }
+                ],
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json'
+                }
+            });
+        });
+    </script>
+
+    @if (TempData["editAusencias"] != null)
+    {
+        <script>
+            Toastify({
+                text: "¡Ausencia editada!",
+                duration: 3000,
+                newWindow: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+            }).showToast();
+        </script>
+    }
+
+    @if (TempData["deleteAusencias"] != null)
+    {
+        <script>
+            Toastify({
+                text: "Se eliminó la Ausencia...",
+                duration: 3000,
+                newWindow: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to rig

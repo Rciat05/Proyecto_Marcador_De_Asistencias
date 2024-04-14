@@ -26,6 +26,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Desktop/Escritorio 2024/Proyecto_Marcar_Asistencias/Proyecto_Marcador_De_Asistencias/Marcar Asistencias/Views/Ausencias/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desktop/Escritorio 2024/Proyecto_Marcar_Asistencias/Proyecto_Marcador_De_Asistencias/Marcar Asistencias/Views/Ausencias/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desktop/Escritorio 2024/Proyecto_Marcar_Asistencias/Proyecto_Marcador_De_Asistencias/Marcar Asistencias/Views/Ausencias/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Desktop/Escritorio 2024/Proyecto_Marcar_Asistencias/Proyecto_Marcador_De_Asistencias/Marcar Asistencias/Views/Ausencias/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXVzZW5jaWFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Desktop/Escritorio 2024/Proyecto_Marcar_Asistencias/Proyecto_Marcador_De_Asistencias/Marcar Asistencias/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

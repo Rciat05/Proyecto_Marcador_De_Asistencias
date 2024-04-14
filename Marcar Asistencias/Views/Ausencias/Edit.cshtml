@@ -1,0 +1,71 @@
+﻿@model proyectometodologias.models.AusenciasModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Ausencia</h1>
+
+<h4>AusenciasModel</h4>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly"></div>
+        <form asp-action="Edit" onsubmit="return confirmAction();">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <input asp-for="IDAusencias" type="hidden" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="EmpleadoID" class="form-label">Empleado ID</label>
+                <input asp-for="EmpleadoID" type="text" class="form-control" />
+                <span asp-validation-for="EmpleadoID" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Fecha" class="form-label">Fecha</label>
+                <input asp-for="Fecha" type="text" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="TipoAusencia" class="form-label">Tipo de Ausencia</label>
+                <input asp-for="TipoAusencia" type="text" class="form-control" />
+                <span asp-validation-for="TipoAusencia" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Justificacion" class="form-label">Justificación</label>
+                <input asp-for="Justificacion" type="text" class="form-control" />
+                <span asp-validation-for="Justificacion" class="text-danger"></span>
+            </div>
+            <div class="col-4 offset-2 row">
+                <div class="col">
+                    <button type="submit" class="btn btn-info w-100"><i class="fa-solid fa-check"></i> Guardar</button>
+                </div>
+                <div class="col">
+                    <a class="btn btn-danger w-100" asp-action="Index"><i class="fa-solid fa-xmark"></i> Cancelar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        function confirmAction() {
+            if (confirm('¿Estás seguro de editar esta Ausencia?')) {
+                return true; // Si el usuario hace clic en "Aceptar", el formulario se envía al servidor
+            } else {
+                window.location.href = '@Url.Action("Index", "Ausencias")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
+                return false; // Devolver false para cancelar el envío del formulario
+            }
+        }
+    </script>
+}
