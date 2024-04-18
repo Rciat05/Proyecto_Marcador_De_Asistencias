@@ -31,7 +31,7 @@ namespace Marcar_Asistencias.Repositories
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "dbo.spEmpleados_GetById";
+                string storeProcedure = "spEmpleados_GetById";
 
                 return connection.QueryFirstOrDefault<EmpleadosModel>(
                                   storeProcedure,
@@ -45,7 +45,7 @@ namespace Marcar_Asistencias.Repositories
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "dbo.spEmpleados_Insert";
+                string storeProcedure = "spEmpleados_Insert";
 
                 connection.Execute
                     (
@@ -60,12 +60,12 @@ namespace Marcar_Asistencias.Repositories
         {
             using (var connection = _dataAccess.GetConnection())
             {
-              
-                    string storeProcedure = "dbo.spEmpleados_Delete";
+
+                string storeProcedure = "spEmpleados_Delete";
 
                 connection.Execute(
                      storeProcedure,
-                     new { EmpleadosID = id },
+                     new { EmpleadoID = id },
                      commandType: CommandType.StoredProcedure
                  );
             }
@@ -75,7 +75,7 @@ namespace Marcar_Asistencias.Repositories
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "dbo.spEmpleados_Update";
+                string storeProcedure = "spEmpleados_Update";
 
                 connection.Execute(
                         storeProcedure,

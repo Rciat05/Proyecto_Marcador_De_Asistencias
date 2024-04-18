@@ -51,7 +51,7 @@ namespace Marcar_Asistencias.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public ActionResult Edit(int id)
         {
             var empleados = _empleadosRepository.GetById(id);
 
@@ -65,15 +65,15 @@ namespace Marcar_Asistencias.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(EmpleadosModel empleados)
+        public ActionResult Edit(EmpleadosModel empleados)
         {
             try
             {
                 _empleadosRepository.Edit(empleados);
 
-                TempData["editEmpleados"] = "Se editó con exito";
-                return RedirectToAction(nameof(Index));
+                TempData["editEmpleado"] = "Se editó el empleado";
 
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
@@ -82,15 +82,16 @@ namespace Marcar_Asistencias.Controllers
         }
 
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(EmpleadosModel empleados)
+        public ActionResult Delete(int id)
         {
             try
             {
-                _empleadosRepository.Delete(empleados.EmpleadosID);
+                _empleadosRepository.Delete(id);
 
-                TempData["deleteEmpleados"] = "Se eliminó el empleado con exito";
+                TempData["deleteEmpleados"] = "Se eliminó el empleado con éxito";
 
                 return RedirectToAction(nameof(Index));
             }
@@ -98,9 +99,10 @@ namespace Marcar_Asistencias.Controllers
             {
                 TempData["deleteClient"] = ex.Message;
 
-                return View(empleados);
+                return RedirectToAction(nameof(Index)); // Redirige a Index en caso de error
             }
         }
+
     }
 }
 

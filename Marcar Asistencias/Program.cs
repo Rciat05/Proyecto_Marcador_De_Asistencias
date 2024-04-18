@@ -15,9 +15,10 @@ namespace Marcar_Asistencias
 
 			builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 			builder.Services.AddScoped<IEmpleadosRepository, EmpleadosRepository>();
+            builder.Services.AddScoped<IAusenciasRepository, AusenciasRepository>();
 
 
-			var app = builder.Build();
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
