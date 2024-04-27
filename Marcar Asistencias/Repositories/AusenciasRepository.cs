@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Marcar_Asistencias.Data;
 using Marcar_Asistencias.Models;
-using proyectometodologias.models;
 using System.Data;
 
 namespace Marcar_Asistencias.Repositories
@@ -9,6 +8,11 @@ namespace Marcar_Asistencias.Repositories
     public class AusenciasRepository : IAusenciasRepository
     {
         private readonly ISqlDataAccess _dataAccess;
+
+        public AusenciasRepository(ISqlDataAccess dataAccess)
+        {
+            _dataAccess = dataAccess;
+        }
 
         public IEnumerable<AusenciasModels> GetAll()
         {
@@ -32,7 +36,7 @@ namespace Marcar_Asistencias.Repositories
                 connection.Execute
                     (
                         storeProcedure,
-                        new { ausencias.EmpleadoID, ausencias.Fecha, ausencias.TipoAusencia, ausencias.Justificacion},
+                        new {ausencias.EmpleadoID, ausencias.Fecha, ausencias.TipoAusencia, ausencias.Justificacion},
                         commandType: CommandType.StoredProcedure
                     );
             }

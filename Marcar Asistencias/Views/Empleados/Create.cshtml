@@ -4,43 +4,39 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Agregar Empleado</h1>
-
-<h4>EmpleadosModel</h4>
-<hr />
+<div class="container">
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" asp-controller="Empleados">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label">Nombre</label>
-                <input asp-for="Nombre" class="form-control" />
+    <div class="col-md-12">
+
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <form asp-action="Create" onsubmit="return confirmAction();">
+            @Html.AntiForgeryToken()
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label">Nombre: </label>
+                <input asp-for="Nombre" type="text" class="form-control" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Apellido" class="control-label"Apellido></label>
-                <input asp-for="Apellido" class="form-control" />
+            <div class="mb-3">
+                <label asp-for="Apellido" class="form-label">Apellido: </label>
+                <input asp-for="Apellido" type="text" class="form-control" />
                 <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="FechaNacimiento" class="control-label">Fecha de Nacimiento</label>
-                <input asp-for="FechaNacimiento" class="form-control" />
+            <div class="mb-3">
+                <label asp-for="FechaNacimiento" class="form-label">Fecha de nacimiento:</label>
+                <input asp-for="FechaNacimiento" type="text" class="form-control" />
                 <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Departamento" class="control-label">Departamento</label>
-                <input asp-for="Departamento" class="form-control" />
+            <div class="mb-3">
+                <label asp-for="Departamento" class="form-label">Departamento perteneciente:</label>
+                <input asp-for="Departamento" type="text" class="form-control" />
                 <span asp-validation-for="Departamento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="@Url.Action("Index", "Empleados")" class="btn btn-secondary">Cancelar</a>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
@@ -54,10 +50,10 @@
 
     <script>
         function confirmAction() {
-            if (confirm('¿Estás seguro de agregar este Empleado?')) {
+            if (confirm('¿Estás seguro de agregar este empleado?')) {
                 return true; // Si el usuario hace clic en "Aceptar", el formulario se envía al servidor
             } else {
-                window.location.href = '@Url.Action("Index", "Empleado")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
+                window.location.href = '@Url.Action("Index", "Empleados")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
                 return false; // Devolver false para cancelar el envío del formulario
             }
         }

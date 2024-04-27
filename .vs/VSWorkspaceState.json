@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Marcar Asistencias",
+    "\\Marcar Asistencias\\Models",
     "\\Marcar Asistencias\\Repositories",
     "\\Marcar Asistencias\\Views",
     "\\Marcar Asistencias\\Views\\Empleados"
   ],
-  "SelectedNode": "\\Marcar Asistencias.sln",
+  "SelectedNode": "\\Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

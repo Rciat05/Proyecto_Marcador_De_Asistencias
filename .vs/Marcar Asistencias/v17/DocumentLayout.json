@@ -3,60 +3,8 @@
   "WorkspaceRootPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\repositories\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\repositories\\empleadosrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\controllers\\empleadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\models\\empleadosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\models\\empleadosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\empleados\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\empleados\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\ausencias\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\ausencias\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\ausencias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\ausencias\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\ausencias\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\ausencias\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\controllers\\ausenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\controllers\\ausenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\ausencias\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\ausencias\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|c:\\desktop\\escritorio 2024\\proyecto_marcar_asistencias\\proyecto_marcador_de_asistencias\\marcar asistencias\\views\\horarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{36993F03-6B28-4107-A838-804D2FFC5DAF}|Marcar Asistencias\\Marcar Asistencias.csproj|solutionrelative:marcar asistencias\\views\\horarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,188 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Delete.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACcAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:45:08.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:37:52.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmpleadosModel.cs",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Models\\EmpleadosModel.cs",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Models\\EmpleadosModel.cs",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Models\\EmpleadosModel.cs",
-              "RelativeToolTip": "Marcar Asistencias\\Models\\EmpleadosModel.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAIA/wBQAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T16:11:23.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:41:06.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EmpleadosController.cs",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Controllers\\EmpleadosController.cs",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Controllers\\EmpleadosController.cs",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Controllers\\EmpleadosController.cs",
-              "RelativeToolTip": "Marcar Asistencias\\Controllers\\EmpleadosController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAYwB0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:37:03.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmpleadosRepository.cs",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
-              "RelativeToolTip": "Marcar Asistencias\\Repositories\\EmpleadosRepository.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAkwDoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:48:13.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Create.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Empleados\\Create.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Empleados\\Create.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Empleados\\Create.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:45:30.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Create.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Ausencias\\Create.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Create.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Ausencias\\Create.cshtml",
+              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Horarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Horarios\\Index.cshtml",
+              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Horarios\\Index.cshtml",
+              "RelativeToolTip": "Marcar Asistencias\\Views\\Horarios\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:55:26.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\appsettings.json",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\appsettings.json",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\appsettings.json",
-              "RelativeToolTip": "Marcar Asistencias\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-18T16:03:17.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AusenciasController.cs",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Controllers\\AusenciasController.cs",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Controllers\\AusenciasController.cs",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Controllers\\AusenciasController.cs",
-              "RelativeToolTip": "Marcar Asistencias\\Controllers\\AusenciasController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAswFgAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T15:54:11.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Ausencias\\Delete.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Delete.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Ausencias\\Delete.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:57:25.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Index.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Ausencias\\Index.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Index.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Ausencias\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:54:50.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Ausencias\\Edit.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Ausencias\\Edit.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Ausencias\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:55:59.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Marcar Asistencias\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Marcar Asistencias\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAACcAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-18T15:32:51.298Z",
+              "WhenOpened": "2024-04-27T20:10:35.717Z",
               "EditorCaption": ""
             }
           ]

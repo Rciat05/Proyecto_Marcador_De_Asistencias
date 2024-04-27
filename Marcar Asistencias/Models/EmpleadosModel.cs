@@ -10,7 +10,7 @@ namespace proyectometodologias.models
     public class EmpleadosModel
     {
         [Key]
-        public int EmpleadosID { get; set; }
+        public int EmpleadoID { get; set; }
 
         [Required]
         [Display(Name = "Nombre")]

@@ -14,29 +14,28 @@ namespace Marcar_Asistencias.Controllers
             _ausenciasRepository = ausenciasRepository;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View(_ausenciasRepository.GetAll());
         }
 
-        public IActionResult Details()
+        public ActionResult Details(int id)
         {
             return View();
         }
 
-        public IActionResult Create()
+        public ActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(AusenciasModels ausencia)
+        public ActionResult Create(AusenciasModels ausencia)
         {
             try
             {
                 _ausenciasRepository.Add(ausencia);
-                TempData["message"] = "Datos guardados con éxito";
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
@@ -47,7 +46,7 @@ namespace Marcar_Asistencias.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public ActionResult Edit(int id)
         {
             var ausencia = _ausenciasRepository.GetById(id);
             if (ausencia == null)
@@ -59,7 +58,7 @@ namespace Marcar_Asistencias.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(AusenciasModels ausencia)
+        public ActionResult Edit(AusenciasModels ausencia)
         {
             try
             {
@@ -71,6 +70,19 @@ namespace Marcar_Asistencias.Controllers
             {
                 return View(ausencia);
             }
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var ausencia = _ausenciasRepository.GetById(id);
+
+            if (ausencia == null)
+            {
+                return NotFound();
+            }
+
+            return View(ausencia);
         }
 
         [HttpPost]

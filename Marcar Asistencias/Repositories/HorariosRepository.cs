@@ -6,52 +6,53 @@ using System.Data;
 
 namespace Marcar_Asistencias.Repositories
 {
-    public class EmpleadosRepository : IEmpleadosRepository
+    public class HorariosRepository : IHorariosRepository
     {
+
         private readonly ISqlDataAccess _dataAccess;
 
-        public EmpleadosRepository(ISqlDataAccess dataAccess)
+        public HorariosRepository(ISqlDataAccess dataAccess)
         {
             _dataAccess = dataAccess;
         }
 
-        public IEnumerable<EmpleadosModel> GetAll()
+        public IEnumerable<HorariosModel> GetAll()
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "Empleados_GetAll";
+                string storeProcedure = "dbo.spHorarios_GetAll";
 
-                return connection.Query<EmpleadosModel>(
+                return connection.Query<HorariosModel>(
                                   storeProcedure,
                                   commandType: CommandType.StoredProcedure
                                     );
             }
         }
 
-        public EmpleadosModel? GetById(int id)
+        public HorariosModel? GetById(int id)
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "dbo.Empleados_GetById";
+                string storeProcedure = "dbo.Horarios_GetById";
 
-                return connection.QueryFirstOrDefault<EmpleadosModel>(
+                return connection.QueryFirstOrDefault<HorariosModel>(
                                   storeProcedure,
-                                  new { EmpleadoID = id },
+                                  new { HorarioID = id },
                                   commandType: CommandType.StoredProcedure
                                     );
             }
         }
 
-        public void Add(EmpleadosModel empleados)
+        public void Add(HorariosModel horarios)
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "spEmpleados_Insert";
+                string storeProcedure = "spHorarios_Insert";
 
                 connection.Execute
                     (
                         storeProcedure,
-                        new { empleados.Nombre, empleados.Apellido, empleados.FechaNacimiento, empleados.Departamento },
+                        new { horarios.NombreHorario, horarios.DiasLaborables },
                         commandType: CommandType.StoredProcedure
                     );
             }
@@ -62,28 +63,29 @@ namespace Marcar_Asistencias.Repositories
             using (var connection = _dataAccess.GetConnection())
             {
 
-                string storeProcedure = "spEmpleados_Delete";
+                string storeProcedure = "spHorarios_Delete";
 
                 connection.Execute(
                      storeProcedure,
-                     new { EmpleadoID = id },
+                     new { HorarioID = id },
                      commandType: CommandType.StoredProcedure
                  );
             }
         }
 
-        public void Edit(EmpleadosModel empleados)
+        public void Edit(HorariosModel horarios)
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "spEmpleados_Update";
+                string storeProcedure = "spHorarios_Update";
 
                 connection.Execute(
                         storeProcedure,
-                        empleados,
+                        horarios,
                         commandType: CommandType.StoredProcedure
                     );
             }
         }
     }
 }
+

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Marcar_Asistencias.Models.HorariosModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HorarioID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreHorario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiasLaborables)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HorarioID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreHorario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiasLaborables)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.HorarioID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.HorarioID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.HorarioID })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

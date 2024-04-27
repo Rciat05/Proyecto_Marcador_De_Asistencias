@@ -4,23 +4,19 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Editar información</h1>
 
-<h4>AusenciasModels</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" asp-controller="Ausencias" onsubmit="return confirmAction()">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IDAusencias" class="control-label"></label>
-                <input asp-for="IDAusencias" class="form-control" />
-                <span asp-validation-for="IDAusencias" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EmpleadoID" class="control-label"></label>
-                <input asp-for="EmpleadoID" class="form-control" />
-                <span asp-validation-for="EmpleadoID" class="text-danger"></span>
+                <input type="hidden" asp-for="IDAusencias" />
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TipoAusencia" class="control-label"></label>
@@ -28,26 +24,46 @@
                 <span asp-validation-for="TipoAusencia" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Fecha" class="control-label"></label>
-                <input asp-for="Fecha" class="form-control" />
-                <span asp-validation-for="Fecha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Justificacion" class="control-label"></label>
                 <input asp-for="Justificacion" class="form-control" />
                 <span asp-validation-for="Justificacion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+            <div class="col-4 offset-2 row">
+                <div class="col">
+                    <button type="submit" class="btn btn-info w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="col">
+                    <a class="btn btn-danger w-100" asp-action="Index">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </a>
+                </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    <script>
+        function confirmAction() {
+            if (confirm('¿Estás seguro de editar esta Ausencia?')) {
+                return true; // Si el usuario hace clic en "Aceptar", el formulario se envía al servidor
+            } else {
+                window.location.href = '@Url.Action("Index", "Ausencias")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
+                return false; // Devolver false para cancelar el envío del formulario
+            }
+        }
+    </script>
 }

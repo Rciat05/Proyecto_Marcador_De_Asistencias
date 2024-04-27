@@ -16,6 +16,7 @@ namespace Marcar_Asistencias
 			builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 			builder.Services.AddScoped<IEmpleadosRepository, EmpleadosRepository>();
             builder.Services.AddScoped<IAusenciasRepository, AusenciasRepository>();
+            builder.Services.AddScoped<IHorariosRepository, HorariosRepository>();
 
 
             var app = builder.Build();

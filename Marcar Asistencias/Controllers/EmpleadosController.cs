@@ -14,17 +14,17 @@ namespace Marcar_Asistencias.Controllers
             _empleadosRepository = empleadosRepository;
         }
 
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View(_empleadosRepository.GetAll());
         }
 
-        public IActionResult Details()
+        public ActionResult Details()
         {
             return View();
         }
 
-        public IActionResult Create()
+        public ActionResult Create()
         {
             return View();
         }
@@ -32,7 +32,7 @@ namespace Marcar_Asistencias.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(EmpleadosModel empleados)
+        public ActionResult Create(EmpleadosModel empleados)
         {
             try
             {
@@ -82,14 +82,26 @@ namespace Marcar_Asistencias.Controllers
         }
 
 
+		[HttpGet]
+		public ActionResult Delete(int id)
+		{
+			var empleados = _empleadosRepository.GetById(id);
 
-        [HttpPost]
+			if (empleados == null)
+			{
+				return NotFound();
+			}
+
+			return View(empleados);
+		}
+
+		[HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(EmpleadosModel Empleado)
         {
             try
             {
-                _empleadosRepository.Delete(id);
+                _empleadosRepository.Delete(Empleado.EmpleadoID);
 
                 TempData["deleteEmpleados"] = "Se eliminó el empleado con éxito";
 
@@ -99,7 +111,7 @@ namespace Marcar_Asistencias.Controllers
             {
                 TempData["deleteClient"] = ex.Message;
 
-                return RedirectToAction(nameof(Index)); // Redirige a Index en caso de error
+                return View(Empleado);
             }
         }
 
