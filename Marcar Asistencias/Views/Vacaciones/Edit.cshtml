@@ -1,26 +1,36 @@
-﻿@model Marcar_Asistencias.Models.HorariosModel
+﻿@model Marcar_Asistencias.Models.VacacionesModel
 
 @{
-    ViewData["Title"] = "Edit Horario";
+    ViewData["Title"] = "Editar vacaciones";
 }
 
-<h1>Editar Horario</h1>
+<h1>Editar vacaciones</h1>
 
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit" asp-controller="Horarios" onsubmit="return confirmAction()">
+        <form asp-action="Edit" asp-controller="Vacaciones" onsubmit="return confirmAction()">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <input type="hidden" asp-for="HorarioID" />
-                <label asp-for="NombreHorario" class="control-label"></label>
-                <input asp-for="NombreHorario" class="form-control" />
-                <span asp-validation-for="NombreHorario" class="text-danger"></span>
+                <input type="hidden" asp-for="IDVacaciones" />
+                <label asp-for="EmpleadoID" class="control-label"></label>
+                <input asp-for="EmpleadoID" class="form-control" />
+                <span asp-validation-for="EmpleadoID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DiasLaborables" class="control-label"></label>
-                <input asp-for="DiasLaborables" class="form-control" />
-                <span asp-validation-for="DiasLaborables" class="text-danger"></span>
+                <label asp-for="FechaInicio" class="control-label"></label>
+                <input asp-for="FechaInicio" class="form-control" />
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaFin" class="control-label"></label>
+                <input asp-for="FechaFin" class="form-control" />
+                <span asp-validation-for="FechaFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <input asp-for="Tipo" class="form-control" />
+                <span asp-validation-for="Tipo" class="text-danger"></span>
             </div>
             <div class="col-4 offset-2 row">
                 <div class="col">
@@ -41,6 +51,10 @@
     </div>
 </div>
 
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
@@ -52,10 +66,10 @@
 
     <script>
         function confirmAction() {
-            if (confirm('¿Estás seguro de editar este horario?')) {
+            if (confirm('¿Estás seguro de editar este dia?')) {
                 return true; // Si el usuario hace clic en "Aceptar", el formulario se envía al servidor
             } else {
-                window.location.href = '@Url.Action("Index", "Horarios")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
+                window.location.href = '@Url.Action("Index", "Vacaciones")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
                 return false; // Devolver false para cancelar el envío del formulario
             }
         }

@@ -109,7 +109,7 @@ namespace Marcar_Asistencias.Controllers
             }
             catch (Exception ex)
             {
-                TempData["deleteClient"] = ex.Message;
+                TempData["deleteEmployee"] = ex.Message;
 
                 return View(Empleado);
             }

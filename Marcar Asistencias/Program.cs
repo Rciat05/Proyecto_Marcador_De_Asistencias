@@ -17,6 +17,7 @@ namespace Marcar_Asistencias
 			builder.Services.AddScoped<IEmpleadosRepository, EmpleadosRepository>();
             builder.Services.AddScoped<IAusenciasRepository, AusenciasRepository>();
             builder.Services.AddScoped<IHorariosRepository, HorariosRepository>();
+            builder.Services.AddScoped<IVacacionesRepository, VacacionesRepository>();
 
 
             var app = builder.Build();

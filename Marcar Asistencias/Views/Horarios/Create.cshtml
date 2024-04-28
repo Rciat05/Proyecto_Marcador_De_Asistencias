@@ -1,43 +1,53 @@
 ﻿@model Marcar_Asistencias.Models.HorariosModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Horario";
 }
 
 <h1>Create</h1>
 
-<h4>HorariosModel</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="HorarioID" class="control-label"></label>
-                <input asp-for="HorarioID" class="form-control" />
-                <span asp-validation-for="HorarioID" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="NombreHorario" class="control-label"></label>
-                <input asp-for="NombreHorario" class="form-control" />
-                <span asp-validation-for="NombreHorario" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DiasLaborables" class="control-label"></label>
-                <input asp-for="DiasLaborables" class="form-control" />
-                <span asp-validation-for="DiasLaborables" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <form asp-action="Create" onsubmit="return confirmAction();">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label asp-for="NombreHorario" class="form-label">Tipo de horario: </label>
+                    <input asp-for="NombreHorario" type="text" class="form-control" />
+                    <span asp-validation-for="NombreHorario" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DiasLaborables" class="form-label">Dias a trabajar (segun la empresa): </label>
+                    <input asp-for="DiasLaborables" type="text" class="form-control" />
+                    <span asp-validation-for="DiasLaborables" class="text-danger"></span>
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                    <a href="@Url.Action("Index", "Horarios")" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    <script>
+        function confirmAction() {
+            if (confirm('¿Estás seguro de agregar este Horario?')) {
+                return true; // Si el usuario hace clic en "Aceptar", el formulario se envía al servidor
+            } else {
+                window.location.href = '@Url.Action("Index", "Horarios")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
+                return false; // Devolver false para cancelar el envío del formulario
+            }
+        }
+    </script>
 }
