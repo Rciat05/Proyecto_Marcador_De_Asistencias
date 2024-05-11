@@ -1,0 +1,64 @@
+﻿@model Marcar_Asistencias.Models.ComentariosModel
+
+@{
+    ViewData["Title"] = "Create Comentarios";
+}
+
+<h1>Crear nuevo comentario</h1>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <form asp-action="Create" onsubmit="return confirmAction();">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label asp-for="UsuarioID" class="form-label">UsuarioID: </label>
+                    <input asp-for="UsuarioID" type="text" class="form-control" />
+                    <span asp-validation-for="UsuarioID" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Tipo" class="form-label">Tipo de comentario: </label>
+                    <input asp-for="Tipo" type="text" class="form-control" />
+                    <span asp-validation-for="Tipo" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="FechaHora" class="form-label">Fecha del comentario:</label>
+                    <input asp-for="FechaHora" type="text" class="form-control" />
+                    <span asp-validation-for="FechaHora" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Texto" class="form-label"> Ingrese sus motivos:</label>
+                    <input asp-for="Texto" type="text" class="form-control" />
+                    <span asp-validation-for="Texto" class="text-danger"></span>
+                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                    <a href="@Url.Action("Index", "Comentarios")" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+    <script>
+        function confirmAction() {
+            if (confirm('¿Estás seguro de agregar este comentario?')) {
+                return true; // Si el usuario hace clic en "Aceptar", el formulario se envía al servidor
+            } else {
+                window.location.href = '@Url.Action("Index", "Comentarios")'; // Redirigir al usuario al índice si hace clic en "Cancelar"
+                return false; // Devolver false para cancelar el envío del formulario
+            }
+        }
+    </script>
+}
