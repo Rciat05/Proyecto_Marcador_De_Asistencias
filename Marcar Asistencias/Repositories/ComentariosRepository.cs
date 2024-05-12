@@ -66,7 +66,7 @@ namespace Marcar_Asistencias.Repositories
 
                 connection.Execute(
                      storeProcedure,
-                     new { EmpleadoID = id },
+                     new { ComentarioNotaID = id },
                      commandType: CommandType.StoredProcedure
                  );
             }

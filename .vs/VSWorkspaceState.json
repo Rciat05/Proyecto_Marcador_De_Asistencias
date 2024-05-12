@@ -3,10 +3,8 @@
     "",
     "\\Marcar Asistencias",
     "\\Marcar Asistencias\\Models",
-    "\\Marcar Asistencias\\Repositories",
-    "\\Marcar Asistencias\\Views",
     "\\Marcar Asistencias\\Views\\Empleados"
   ],
-  "SelectedNode": "\\Marcar Asistencias\\Models\\VacacionesModel.cs",
+  "SelectedNode": "\\Marcar Asistencias\\Models\\ComentariosModel.cs",
   "PreviewInSolutionExplorer": false
 }
