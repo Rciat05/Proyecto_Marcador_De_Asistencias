@@ -1,4 +1,5 @@
 ﻿using Marcar_Asistencias.Repositories;
+using Marcar_Asistencias.Services.Email;
 using Microsoft.AspNetCore.Mvc;
 using proyectometodologias.models;
 
@@ -8,10 +9,12 @@ namespace Marcar_Asistencias.Controllers
     {
 
         private readonly IEmpleadosRepository _empleadosRepository;
+        private readonly IEmailService _emailService;
 
-        public EmpleadosController(IEmpleadosRepository empleadosRepository)
+        public EmpleadosController(IEmpleadosRepository empleadosRepository, IEmailService emailService)
         {
             _empleadosRepository = empleadosRepository;
+            _emailService = emailService;            
         }
 
         public ActionResult Index()
@@ -39,8 +42,14 @@ namespace Marcar_Asistencias.Controllers
                 _empleadosRepository.Add(empleados);
 
                 TempData["message"] = "Datos guardados con exito";
-                return RedirectToAction(nameof(Index));
 
+                string email = "HeladosSarita@gmail.com";
+                string subject = "Nuevo empleado Sarita";
+                string body = "Bienvenido a tu nuevo empleo de Helados Sarita! un gusto " + empleados.Nombre;
+
+                _emailService.SendEmail(email, empleados.Nombre, subject, body);
+
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {

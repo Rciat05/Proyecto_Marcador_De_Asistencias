@@ -1,5 +1,6 @@
 using Marcar_Asistencias.Data;
 using Marcar_Asistencias.Repositories;
+using Marcar_Asistencias.Services.Email;
 using MarcarAsistencias.Data;
 
 namespace Marcar_Asistencias
@@ -12,6 +13,8 @@ namespace Marcar_Asistencias
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddTransient<IEmailService, EmailService>();
 
 			builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 			builder.Services.AddScoped<IEmpleadosRepository, EmpleadosRepository>();

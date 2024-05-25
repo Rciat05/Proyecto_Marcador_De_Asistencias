@@ -482,3 +482,6 @@ C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asis
 C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias\obj\Debug\net8.0\Marcar Asistencias.pdb
 C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias\obj\Debug\net8.0\Marcar Asistencias.genruntimeconfig.cache
 C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias\obj\Debug\net8.0\ref\Marcar Asistencias.dll
+C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias\bin\Debug\net8.0\MailKit.dll
+C:\Desktop\Escritorio 2024\Proyecto_Marcar_Asistencias\Proyecto_Marcador_De_Asistencias\Marcar Asistencias\bin\Debug\net8.0\MimeKit.dll

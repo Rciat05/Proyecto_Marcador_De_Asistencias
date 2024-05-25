@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Marcar Asistencias",
-    "\\Marcar Asistencias\\Models",
-    "\\Marcar Asistencias\\Views\\Empleados"
+    "\\Marcar Asistencias\\Repositories"
   ],
-  "SelectedNode": "\\Marcar Asistencias\\Models\\ComentariosModel.cs",
+  "SelectedNode": "\\Marcar Asistencias\\Repositories\\IComentariosRepository.cs",
   "PreviewInSolutionExplorer": false
 }
