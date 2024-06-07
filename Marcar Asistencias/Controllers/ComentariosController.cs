@@ -1,7 +1,9 @@
 ﻿using Marcar_Asistencias.Models;
 using Marcar_Asistencias.Repositories;
+using Marcar_Asistencias.Services.Email;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.DependencyResolver;
 
 namespace Marcar_Asistencias.Controllers
 {
@@ -9,10 +11,12 @@ namespace Marcar_Asistencias.Controllers
     {
 
         private readonly IComentariosRepository _comentariosRepository;
+		private readonly IEmailService _emailService;
 
-        public ComentariosController(IComentariosRepository comentariosRepository)
+		public ComentariosController(IComentariosRepository comentariosRepository, IEmailService emailService)
         {
             _comentariosRepository = comentariosRepository;
+            _emailService = emailService;
         }
 
         public ActionResult Index()
@@ -41,10 +45,15 @@ namespace Marcar_Asistencias.Controllers
             {
                 _comentariosRepository.Add(comentarios);
 
-                TempData["message"] = "Datos guardados con exito";
-                return RedirectToAction(nameof(Index));
+				TempData["message"] = "Datos guardados con exito";
 
-            }
+				string email = "developers@help.sv.com";
+				string subject = comentarios.Tipo;
+				string type = "Comment";
+				_emailService.SendEmail(email, comentarios.Texto, subject, type);
+
+				return RedirectToAction(nameof(Index));
+			}
             catch (Exception ex)
             {
                 TempData["message"] = ex.Message;
@@ -63,7 +72,12 @@ namespace Marcar_Asistencias.Controllers
                 return NotFound();
             }
 
-            return View(comentarios);
+			string email = "developers@help.sv.com";
+			string subject = comentarios.Tipo;
+			string type = "Comment";
+			_emailService.SendEmail(email, comentarios.Texto, subject, type);
+
+			return View(comentarios);
         }
 
         

@@ -13,7 +13,7 @@ namespace Marcar_Asistencias.Services.Email
             _configuration = configuration;
         }
 
-        public void SendEmail(string emailTo, string recepientName, string subject, string body)
+        public void SendEmail(string emailTo, string recepientName, string subject, string type)
         {
             try
             {
@@ -22,11 +22,37 @@ namespace Marcar_Asistencias.Services.Email
                     _configuration["Mailtrap:EmailFrom"]
                     ));
 
-                message.To.Add(new MailboxAddress(recepientName, emailTo));
+                message.To.Add(new MailboxAddress(type, emailTo));
                 message.Subject = subject;
-                message.Body = new TextPart("plain") { Text = body };
 
-                using (var client = new SmtpClient())
+				var builder = new BodyBuilder();
+				var templatePath = "";
+
+				if (type == "Vacation")
+				{
+					templatePath = Path.Combine(
+					Directory.GetCurrentDirectory(),
+					"EmailTemplates",
+					"Vacaciones.html"
+					);
+				}
+				else if (type == "Comment")
+				{
+					templatePath = Path.Combine(
+					Directory.GetCurrentDirectory(),
+					"EmailTemplates",
+					"Comentarios.html"
+					);
+				}
+
+				var templateContent = File.ReadAllText(templatePath);
+				templateContent = templateContent.Replace("@Comentario", recepientName);
+
+				builder.HtmlBody = templateContent;
+
+				message.Body = builder.ToMessageBody();
+
+				using (var client = new SmtpClient())
                 {
                     client.Connect(_configuration["Mailtrap:Host"],
                         int.Parse(_configuration["Mailtrap:Port"]), false);
@@ -37,10 +63,10 @@ namespace Marcar_Asistencias.Services.Email
                     client.Disconnect(true);
                 }
             }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
+			catch (Exception)
+			{
+				throw;
+			}
+		}
     }
 }
