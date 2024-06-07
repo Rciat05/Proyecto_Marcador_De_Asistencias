@@ -7031,19 +7031,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chafm\\.nuget\\packages\\": {}
+    "C:\\Users\\Juan Carlos Iglesias\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\U\\Marcador\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
+      "projectUniqueName": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
       "projectName": "Marcar Asistencias",
-      "projectPath": "D:\\U\\Marcador\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
-      "packagesPath": "C:\\Users\\chafm\\.nuget\\packages\\",
-      "outputPath": "D:\\U\\Marcador\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\obj\\",
+      "projectPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
+      "packagesPath": "C:\\Users\\Juan Carlos Iglesias\\.nuget\\packages\\",
+      "outputPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcar_Asistencias\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\chafm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Juan Carlos Iglesias\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7051,7 +7051,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7125,7 +7124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

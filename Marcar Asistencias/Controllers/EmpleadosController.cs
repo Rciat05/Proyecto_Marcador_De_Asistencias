@@ -7,14 +7,13 @@ namespace Marcar_Asistencias.Controllers
 {
     public class EmpleadosController : Controller
     {
-
         private readonly IEmpleadosRepository _empleadosRepository;
         private readonly IEmailService _emailService;
 
         public EmpleadosController(IEmpleadosRepository empleadosRepository, IEmailService emailService)
         {
             _empleadosRepository = empleadosRepository;
-            _emailService = emailService;            
+            _emailService = emailService;
         }
 
         public ActionResult Index()
@@ -32,7 +31,6 @@ namespace Marcar_Asistencias.Controllers
             return View();
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(EmpleadosModel empleados)
@@ -40,8 +38,7 @@ namespace Marcar_Asistencias.Controllers
             try
             {
                 _empleadosRepository.Add(empleados);
-
-                TempData["message"] = "Datos guardados con exito";
+                TempData["message"] = "Datos guardados con éxito";
 
                 string email = "HeladosSarita@gmail.com";
                 string subject = "Nuevo empleado Sarita";
@@ -54,7 +51,6 @@ namespace Marcar_Asistencias.Controllers
             catch (Exception ex)
             {
                 TempData["message"] = ex.Message;
-
                 return View(empleados);
             }
         }
@@ -79,7 +75,6 @@ namespace Marcar_Asistencias.Controllers
             try
             {
                 _empleadosRepository.Edit(empleados);
-
                 TempData["editEmpleado"] = "Se editó el empleado";
 
                 return RedirectToAction(nameof(Index));
@@ -90,28 +85,26 @@ namespace Marcar_Asistencias.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            var empleados = _empleadosRepository.GetById(id);
 
-		[HttpGet]
-		public ActionResult Delete(int id)
-		{
-			var empleados = _empleadosRepository.GetById(id);
+            if (empleados == null)
+            {
+                return NotFound();
+            }
 
-			if (empleados == null)
-			{
-				return NotFound();
-			}
+            return View(empleados);
+        }
 
-			return View(empleados);
-		}
-
-		[HttpPost]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(EmpleadosModel Empleado)
+        public ActionResult DeleteConfirmed(int id)
         {
             try
             {
-                _empleadosRepository.Delete(Empleado.EmpleadoID);
-
+                _empleadosRepository.Delete(id);
                 TempData["deleteEmpleados"] = "Se eliminó el empleado con éxito";
 
                 return RedirectToAction(nameof(Index));
@@ -120,10 +113,13 @@ namespace Marcar_Asistencias.Controllers
             {
                 TempData["deleteEmployee"] = ex.Message;
 
-                return View(Empleado);
+                var empleados = _empleadosRepository.GetById(id);
+                if (empleados == null)
+                {
+                    return NotFound();
+                }
+                return View(empleados);
             }
         }
-
     }
 }
-
