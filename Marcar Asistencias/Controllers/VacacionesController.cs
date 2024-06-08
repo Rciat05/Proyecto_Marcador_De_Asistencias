@@ -39,25 +39,29 @@ namespace Marcar_Asistencias.Controllers
         {
             try
             {
-                _vacacionesRepository.Add(vacaciones);
+                if (ModelState.IsValid)
+                {
+                    _vacacionesRepository.Add(vacaciones);
 
-                TempData["message"] = "Datos guardados con exito";
+                    TempData["message"] = "Datos guardados con éxito";
 
-				string email = "empleado@empleado.com";
-				string subject = vacaciones.Tipo;
-				string type = "Vacation";
-				_emailService.SendEmail(email, $"¡Hola {vacaciones.EmpleadoID}! Sus vacaciones inician: {vacaciones.FechaInicio} y finalizan: {vacaciones.FechaFin}", subject, type);
+                    string email = "empleado@empleado.com";
+                    string subject = vacaciones.Tipo;
+                    string type = "Vacation";
+                    _emailService.SendEmail(email, $"¡Hola {vacaciones.EmpleadoID}! Sus vacaciones inician: {vacaciones.FechaInicio} y finalizan: {vacaciones.FechaFin}", subject, type);
 
-				return RedirectToAction(nameof(Index));
-
+                    return RedirectToAction(nameof(Index)); // Redirecciona al Index después de crear exitosamente
+                }
+                // Si el modelo no es válido, vuelve a mostrar la vista Create con los errores de validación
+                return View(vacaciones);
             }
             catch (Exception ex)
             {
-                TempData["message"] = ex.Message;
-
-                return View(vacaciones);
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View(vacaciones); // Si hay una excepción, vuelve a mostrar la vista Create con un mensaje de error
             }
         }
+
 
         // GET: VacacionesController/Edit/5
         public ActionResult Edit(int id)

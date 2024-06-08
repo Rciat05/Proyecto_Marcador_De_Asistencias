@@ -1,127 +1,164 @@
 ﻿using Marcar_Asistencias.Models;
 using Marcar_Asistencias.Repositories;
-using Microsoft.AspNetCore.Http;
+using Marcar_Asistencias.Services.Email;
 using Microsoft.AspNetCore.Mvc;
-using proyectometodologias.models;
 
 namespace Marcar_Asistencias.Controllers
 {
-	public class HorariosController : Controller
-	{
+    public class HorariosController : Controller
+    {
+        private readonly IHorariosRepository _horariosRepository;
+        private readonly IEmailService _emailService;
 
-		private readonly IHorariosRepository _horariosRepository;
-
-        public HorariosController(IHorariosRepository horariosRepository)
+        public HorariosController(IHorariosRepository horariosRepository, IEmailService emailService)
         {
             _horariosRepository = horariosRepository;
+            _emailService = emailService;
         }
 
         public ActionResult Index()
-		{
-			return View(_horariosRepository.GetAll());
-		}
-
-		public ActionResult Details(int id)
-		{
-			return View();
-		}
-
-		// GET: HorariosController/Create
-		public ActionResult Create()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Create(HorariosModel horarios)
-		{
-			try
-			{
-				_horariosRepository.Add(horarios);
-
-				TempData["message"] = "Datos guardados con exito";
-				return RedirectToAction(nameof(Index));
-
-			}
-			catch (Exception ex)
-			{
-				TempData["message"] = ex.Message;
-
-				return View(horarios);
-			}
-		}
-
-		// GET: HorariosController/Edit/5
-		public ActionResult Edit(int id)
-		{
-			var horarios = _horariosRepository.GetById(id);
-
-			if (horarios == null)
-			{
-				return NotFound();
-			}
-
-			return View(horarios);
-		}
-
-		// POST: HorariosController/Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Edit(HorariosModel horarios)
-		{
-			try
-			{
-				_horariosRepository.Edit(horarios);
-
-				TempData["editEmpleado"] = "Se editó el empleado";
-
-				return RedirectToAction(nameof(Index));
-			}
-			catch (Exception ex)
-			{
-				return View(horarios);
-			}
-		}
-
-		// GET: HorariosController/Delete/5
-		public ActionResult Delete(int id)
-		{
-			return View();
-		}
-
-
-		[HttpGet]
-		public ActionResult DeleteHorarios(int id)
-		{
-            var horarios = _horariosRepository.GetById(id);
-
-            if (horarios == null)
-            {
-                return NotFound();
-            }
-
-            return View(horarios);
-        }
-
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Delete(HorariosModel horarios)
-		{
+        {
             try
             {
-                _horariosRepository.Delete(horarios.HorarioID);
+                var horarios = _horariosRepository.GetAll();
+                return View(horarios);
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View("Error");
+            }
+        }
 
+        public ActionResult Details(int id)
+        {
+            try
+            {
+                var horario = _horariosRepository.GetById(id);
+                if (horario == null)
+                {
+                    return NotFound();
+                }
+                return View(horario);
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View("Error");
+            }
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(HorariosModel horarios)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _horariosRepository.Add(horarios);
+
+                    TempData["message"] = "Datos guardados con éxito";
+
+                    string email = "HeladosSarita@gmail.com";
+                    string subject = "Nuevo horario registrado";
+                    string type = "Horarios";
+                    _emailService.SendEmail(email, $"Un nuevo horario de trabajo ha sido registrado los días {horarios.DiasLaborables}", subject, type);
+
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(horarios);
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View(horarios);
+            }
+        }
+
+        public ActionResult Edit(int id)
+        {
+            try
+            {
+                var horarios = _horariosRepository.GetById(id);
+                if (horarios == null)
+                {
+                    return NotFound();
+                }
+                return View(horarios);
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View("Error");
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(HorariosModel horarios)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _horariosRepository.Edit(horarios);
+                    TempData["editEmpleado"] = "Se editó el horario";
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(horarios);
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View(horarios);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult DeleteHorarios(int id)
+        {
+            try
+            {
+                var horarios = _horariosRepository.GetById(id);
+                if (horarios == null)
+                {
+                    return NotFound();
+                }
+                return View(horarios);
+            }
+            catch (Exception ex)
+            {
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View("Error");
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                var horarios = _horariosRepository.GetById(id);
+                if (horarios == null)
+                {
+                    return NotFound();
+                }
+                _horariosRepository.Delete(id);
                 TempData["deleteHorarios"] = "Se eliminó el horario con éxito";
-
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
-                TempData["deleteClient"] = ex.Message;
-
-                return View(horarios);
+                TempData["errorMessage"] = $"Error: {ex.Message}";
+                return View("Error");
             }
         }
-	}
+    }
 }

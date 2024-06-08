@@ -1,35 +1,38 @@
 ﻿@model Marcar_Asistencias.Models.HorariosModel
 
 @{
-    ViewData["Title"] = "Delete horario";
+    ViewData["Title"] = "Delete";
 }
 
 <h1>Delete</h1>
 
-<h3>¿Desea crear la información de este horario?</h3>
+<h3>Are you sure you want to delete this?</h3>
 <div>
+    <h4>HorariosModel</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">Tipo de horario:</dt>
-        <dd class="col-sm-10">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HorarioID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HorarioID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreHorario)
+        </dt>
+        <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.NombreHorario)
         </dd>
-        <dt class="col-sm-2">Dias de trabajo:</dt>
-        <dd class="col-sm-10">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DiasLaborables)
+        </dt>
+        <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DiasLaborables)
         </dd>
-        <dt class="col-sm-2">Fecha de nacimiento:</dt>
     </dl>
-
+    
     <form asp-action="Delete">
-        <input asp-for="HorarioID" type="hidden" class="form-control" />
-        <div class="col-4 offset-2 row">
-            <div class="col">
-                <button type="submit" class="btn btn-danger w-100"><i class="fa-solid fa-trash"></i> Borrar</button>
-            </div>
-            <div class="col">
-                <a class="btn btn-info w-100" asp-action="Index"><i class="fa-solid fa-arrow-left"></i> Volver</a>
-            </div>
-        </div>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>

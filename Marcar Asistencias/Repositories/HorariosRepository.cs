@@ -33,7 +33,7 @@ namespace Marcar_Asistencias.Repositories
         {
             using (var connection = _dataAccess.GetConnection())
             {
-                string storeProcedure = "dbo.Horarios_GetById";
+                string storeProcedure = "dbo.spHorarios_GetById";
 
                 return connection.QueryFirstOrDefault<HorariosModel>(
                                   storeProcedure,

@@ -5,7 +5,7 @@
 }
 
 <h1>Agregar ausencia para el trabajo:</h1>
-
+ <hr />
 
 <div class="container">
     <div class="row">
@@ -20,9 +20,9 @@
                     <input asp-for="EmpleadoID" type="text" class="form-control" />
                     <span asp-validation-for="EmpleadoID" class="text-danger"></span>
                 </div>
-                <div class="mb-3">
-                    <label asp-for="Fecha" class="form-label">Fecha de la ausencia: </label>
-                    <input asp-for="Fecha" type="text" class="form-control" />
+                <div class="form-group">
+                    <label asp-for="Fecha" class="control-label">Fecha de ausencia</label>
+                    <input asp-for="Fecha" class="form-control" />
                     <span asp-validation-for="Fecha" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
@@ -34,6 +34,7 @@
                     <label asp-for="Justificacion" class="form-label">Razon de la falta:</label>
                     <input asp-for="Justificacion" type="text" class="form-control" />
                     <span asp-validation-for="Justificacion" class="text-danger"></span>
+                    <br />
                     <button type="submit" class="btn btn-primary">Aceptar</button>
                     <a href="@Url.Action("Index", "Ausencias")" class="btn btn-secondary">Cancelar</a>
                 </div>

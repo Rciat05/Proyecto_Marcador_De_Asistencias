@@ -44,8 +44,32 @@ namespace Marcar_Asistencias.Services.Email
 					"Comentarios.html"
 					);
 				}
+                else if (type == "Ausencia")
+                {
+                    templatePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "EmailTemplates",
+                    "Ausencias.html"
+                    );
+                }
+                else if (type == "Empleado")
+                {
+                    templatePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "EmailTemplates",
+                    "Empleados.html"
+                    );
+                }
+                else if (type == "Horarios")
+                {
+                    templatePath = Path.Combine(
+                    Directory.GetCurrentDirectory(),
+                    "EmailTemplates",
+                    "Horarios.html"
+                    );
+                }
 
-				var templateContent = File.ReadAllText(templatePath);
+                var templateContent = File.ReadAllText(templatePath);
 				templateContent = templateContent.Replace("@Comentario", recepientName);
 
 				builder.HtmlBody = templateContent;

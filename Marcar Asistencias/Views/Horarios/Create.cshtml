@@ -15,14 +15,18 @@
             <form asp-action="Create" onsubmit="return confirmAction();">
                 @Html.AntiForgeryToken()
                 <div class="mb-3">
-                    <label asp-for="NombreHorario" class="form-label">Tipo de horario: </label>
-                    <input asp-for="NombreHorario" type="text" class="form-control" />
+                    <label asp-for="NombreHorario" class="form-label">Tipo de horario:</label>
+                    <select asp-for="NombreHorario" class="form-control">
+                        <option value="Diurno">Horario Diurno</option>
+                        <option value="Nocturno">Horario Nocturno</option>
+                    </select>
                     <span asp-validation-for="NombreHorario" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <label asp-for="DiasLaborables" class="form-label">Dias a trabajar (segun la empresa): </label>
                     <input asp-for="DiasLaborables" type="text" class="form-control" />
                     <span asp-validation-for="DiasLaborables" class="text-danger"></span>
+                    <br />
                     <button type="submit" class="btn btn-primary">Aceptar</button>
                     <a href="@Url.Action("Index", "Horarios")" class="btn btn-secondary">Cancelar</a>
                 </div>
