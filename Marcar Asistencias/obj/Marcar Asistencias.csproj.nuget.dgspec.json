@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Whilo\\Desktop\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {}
+    "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Whilo\\Desktop\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {
+    "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Whilo\\Desktop\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
+        "projectUniqueName": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
         "projectName": "Marcar Asistencias",
-        "projectPath": "C:\\Users\\Whilo\\Desktop\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
-        "packagesPath": "C:\\Users\\Whilo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Whilo\\Desktop\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\obj\\",
+        "projectPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\Marcar Asistencias.csproj",
+        "packagesPath": "C:\\Users\\Juan Carlos Iglesias\\.nuget\\packages\\",
+        "outputPath": "C:\\Desktop\\Escritorio 2024\\Proyecto_Marcador_De_Asistencias\\Marcar Asistencias\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Whilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Juan Carlos Iglesias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
